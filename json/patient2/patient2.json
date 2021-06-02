@@ -1,0 +1,33 @@
+{
+    "resourceType": "Patient",
+    "identifier": "49171",
+    "name": [
+        {
+            "use": "official",
+            "family": "Salk",
+            "given": [
+                "Jonas"
+            ]
+        }
+    ],
+    "birthDate": "1922-12-22",
+    "gender": "male",
+    "telecom": [
+        {
+            "system": "phone",
+            "value": "+33 (237) 998328"
+        }
+    ],
+    "address": {
+        "use": "home",
+        "type": "both",
+        "line": [
+            "182 Heart St"
+        ],
+        "city": "Dublin",
+        "district": "Artificial",
+        "state": "CA",
+        "postalCode": "94588",
+        "country": "United States of America"
+    }
+}

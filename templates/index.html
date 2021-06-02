@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ventillate - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ventillate&trade; - Home</h1>
+      <br>
+      {% if message %}
+        {{ message }}
+      {% endif %}
+      <br>
+      {% if ns != null and ns != "/" %}
+        <p>Click <a href="/{{ ns }}login">here</a> to login.</p>
+        <br>
+        <p>No account? Click <a href="/{{ ns }}register">here</a> to register.</p>
+      {% else %}
+        <p>Click <a href="/login">here</a> to login.</p>
+        <br>
+        <p>No account? Click <a href="/register">here</a> to register.</p>
+      {% endif %}
+    </div>
+  </body>
+</html>

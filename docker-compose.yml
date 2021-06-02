@@ -1,0 +1,35 @@
+version: '3.6'
+
+services:
+  api-service:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: api-service
+    depends_on:
+      - db-service
+    links:
+      - db-service
+    environment:
+      - SQLALCHEMY_DATABASE_URI=postgresql+psycopg2://team41:team41@db-service/weaningrecsystem
+      - BASE_URL=http://0.0.0.0:5000
+      - NAMESPACE=/
+    networks:
+      - default
+    ports:
+      - 5000:5000
+    restart: always
+
+  db-service:
+    environment:
+      - POSTGRES_USER=team41
+      - POSTGRES_PASSWORD=team41
+      - POSTGRES_DB=weaningrecsystem
+    image: postgres:latest
+    networks:
+      - default
+    ports:
+      - 5405:5432
+    restart: always
+    volumes:
+      - ./db/local/:/docker-entrypoint-initdb.d/

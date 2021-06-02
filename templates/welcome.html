@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ventillate - Welcome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ventillate&trade;</h1>
+      <br>
+      {% if doctor_last_name %}
+        Welcome Doctor {{ doctor_last_name }}
+      {% endif %}
+      <br>
+      {% if ns != null and ns != "/" %}
+        <p>Click <a href="/{{ ns }}logout">here</a> to logout.</p>
+      {% else %}
+        <p>Click <a href="/logout">here</a> to logout.</p>
+      {% endif %}
+    </div>
+  </body>
+</html>

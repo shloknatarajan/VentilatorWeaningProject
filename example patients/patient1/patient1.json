@@ -1,0 +1,29 @@
+{
+    "resourceType": "Patient",
+    "identifier": "12345",
+    "name": [{
+            "use": "official",
+            "family": "Winchell",
+            "given": ["Paul"]
+        }],
+    "birthDate": "1922-12-21",
+    "gender": "male",
+    "telecom": [
+        {
+            "system": "phone",
+            "value": "+33 (237) 998327"
+        }
+    ],
+    "address": {
+        "use": "home",
+        "type": "both",
+        "line": [
+          "180 Heart St"
+        ],
+        "city": "Pleasanton",
+        "district": "Artificial",
+        "state": "MO",
+        "postalCode": "63040",
+        "country": "United States of America"
+    }
+}
